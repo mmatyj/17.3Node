@@ -4,8 +4,9 @@ process.stdin.on('readable', function () {
     if (input !== null) {
         var instruction = input.toString().trim();
         switch (instruction) {
-            case '/checkOut':
-                console.log(process.env);
+            case '/check':
+                console.log(process.versions.node)
+                console.log(process.env.lang);
                 break;
             case '/exit':
                 process.stdout.write('Quitting app!\n');
